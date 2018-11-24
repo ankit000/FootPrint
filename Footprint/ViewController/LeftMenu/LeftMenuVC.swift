@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+import LGSideMenuController
 enum MenuSection:String{
     case Logout
+    case MyJourney = "My Journey"
+    
 }
 
 struct MenuRecord {
@@ -72,6 +74,7 @@ class LeftMenuVC:UICollectionViewController, UICollectionViewDelegateFlowLayout
         
         view.addConstraint(visualFormat: "H:|[v0]|", forViews: collectionView!)
         view.addConstraint(visualFormat: "V:|-\(topAnchor)-[v0]-30-[v1]|", forViews: headerImage, collectionView!)
+        view.backgroundColor = FootprintConstant.Color.FootprintBlueColor
     }
     
     fileprivate func setData()
@@ -105,16 +108,36 @@ class LeftMenuVC:UICollectionViewController, UICollectionViewDelegateFlowLayout
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        if let section = MenuSection(rawValue: dataSource[indexPath.item].title){
-            switch section
-            {
-            case .Logout:
-                UserRecordHelper.sharedInstance.logout()
-                openStoryboard(name: FootprintConstant.Storyboard.Login)
-            }
-            
-        }
         
+        
+        let window = (UIApplication.shared.delegate!.window!)! as UIWindow
+        let mainVC = window.rootViewController as! LGSideMenuController
+        
+        
+      //  Router.pushViewController(withStoryboardID:"HomeViewController", type:HomeViewController.self)
+        
+        
+        if !mainVC.isLeftViewAlwaysVisibleForCurrentOrientation {
+            
+            mainVC.hideLeftView(animated: true, completionHandler: {
+                
+                if let section = MenuSection(rawValue: self.dataSource[indexPath.item].title){
+                    switch section
+                    {
+                    case .Logout:
+                        UserRecordHelper.sharedInstance.logout()
+                        Router.pushViewController(withStoryboardID: "LoginVC", type: LoginVC.self)
+                        break
+                        
+                    case .MyJourney:
+                        Router.pushViewController(withStoryboardID: "MyJourneyVC", type: MyJourneyVC.self)
+                        break
+                    }
+                    
+                }
+                
+            })
+        }
     }
 }
 
@@ -153,14 +176,14 @@ class MenuCell: MenuBaseCell
     
     var record:MenuRecord!{
         didSet{
-            lblTitle.text = record.title
+            lblTitle.text = record.title.uppercased()
             lblImage.text = record.imageName
         }
     }
     
     private let lblTitle:UILabel = {
         let lbl = UILabel()
-        lbl.font = UIFont.systemFont(ofSize: 24.0)
+        lbl.font = UIFont(name: "Montserrat-Regular", size: 17.0)
         lbl.textColor = .white
         return lbl
     }()

@@ -50,7 +50,7 @@ class MyJourneyVC: HeaderVC
         collectionView.delegate = self
         
         MyJourneyCell.registerNib(collectionView: collectionView)
-        
+        collectionView.reloadData()
         lblTitle.text = dataSource.title.uppercased()
         lblSubTitle.text = dataSource.subTitle.uppercased()
         if let image = UIImage(named: dataSource.imageURL!){
@@ -68,11 +68,11 @@ class MyJourneyVC: HeaderVC
         print(txtSection1.bounds.size.width)
         
         let startingHeightOfDescription1 = heightConstraintTextSection1View.constant
-        let newHeightOfDescription1 = (dataSource.section1[MyJourneyHelper.Key.Description]?.heightWithConstrainedWidth(width: txtSection1.bounds.size.width, font: font!))! + 50
+        let newHeightOfDescription1 = (dataSource.section1[MyJourneyHelper.Key.Description]?.height(withConstrainedWidth: txtSection1.bounds.size.width, font: font!))! + 50
         heightConstraintTextSection1View.constant = newHeightOfDescription1
         
         let startingHeightOfDescription2 = heightConstraintTextSection2View.constant
-        let newHeightOfDescription2 = (dataSource.section2[MyJourneyHelper.Key.Description]?.heightWithConstrainedWidth(width: txtSection2.bounds.size.width, font: font!))! + 50
+        let newHeightOfDescription2 = (dataSource.section2[MyJourneyHelper.Key.Description]?.height(withConstrainedWidth: txtSection2.bounds.size.width, font: font!))! + 50
         heightConstraintTextSection2View.constant = newHeightOfDescription2
         
         heightConstraintContainerView.constant = heightConstraintContainerView.constant - startingHeightOfDescription1 + newHeightOfDescription1 - startingHeightOfDescription2 + newHeightOfDescription2 + 60
@@ -87,21 +87,7 @@ class MyJourneyVC: HeaderVC
 
 /* ---------------------------------- Extension ----------------------------------------- */
 //MARK:- Extension
-extension MyJourneyVC
-{
-    struct Storyboard{
-        static let ControllerID = String(describing: MyJourneyVC.self)
-    }
-    
-  
-    
-    //MARK:- Static Metod
-    static func instantiate() -> MyJourneyVC{
-        let controller = MyJourneyVC(nibName: "MyJourneyVC", bundle: nil)
-        return controller
-    }
-    
-}
+
 
 extension MyJourneyVC:UICollectionViewDataSource
 {
@@ -113,6 +99,8 @@ extension MyJourneyVC:UICollectionViewDataSource
     {
         return dataSource.myWork.count
     }
+
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyJourneyCell.Constant.Identifier, for: indexPath) as! MyJourneyCell
@@ -120,6 +108,7 @@ extension MyJourneyVC:UICollectionViewDataSource
         
         return cell
     }
+
 }
 
 extension MyJourneyVC:UICollectionViewDelegate

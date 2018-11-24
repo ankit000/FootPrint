@@ -30,8 +30,6 @@ final class GeneralManager
        // #3
         //DropDown.startListeningToKeyboard()
         
-        //#4
-        ApplicationAppearanceManager.appLoadingAppearance()
         setURLCacheCapacity()
     }
     

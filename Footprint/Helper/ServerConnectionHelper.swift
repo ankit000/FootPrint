@@ -41,16 +41,18 @@ final class ServerConnectionHelper
                 handler(false, nil)
             }else{
                 if let data = data {
-                    do {
-                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]
-                        {
-                            handler(true, json)
-                        }else{
+                    DispatchQueue.main.async {
+                        do {
+                            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]
+                            {
+                                handler(true, json)
+                            }else{
+                                handler(false, nil)
+                            }
+                            
+                        }catch {
                             handler(false, nil)
                         }
-                        
-                    }catch {
-                        handler(false, nil)
                     }
                 }
             }

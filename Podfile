@@ -11,7 +11,8 @@ pod 'MBProgressHUD'
 pod 'IQKeyboardManagerSwift'
 pod 'FacebookCore'
 pod 'FacebookLogin'
-pod 'SideMenu'
 pod 'SFFocusViewLayout'
+pod 'LGSideMenuController'
+pod 'SDWebImage', '~> 4.0'
 
 end

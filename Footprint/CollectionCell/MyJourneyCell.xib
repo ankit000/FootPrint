@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyJourneyCell" customModule="Footprint" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="210" height="156"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="210" height="156"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="lnS-gA-VHP">
+                        <rect key="frame" x="5" y="51" width="200" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="500+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="CmY-Eh-gqN">
+                                <rect key="frame" x="73" y="0.0" width="54" height="49"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
+                                <color key="textColor" red="0.019607843137254902" green="0.10980392156862745" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="J88-Tn-YFR">
+                                <rect key="frame" x="61" y="34" width="78.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.019607843137254902" green="0.10980392156862745" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="GcY-oZ-sF8"/>
+                        </constraints>
+                    </stackView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="jDK-Mw-dvd">
+                        <rect key="frame" x="0.0" y="0.0" width="210" height="156"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                        <color key="textColor" red="0.019607843137254902" green="0.10980392156862745" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.5450980392" green="0.64313725489999995" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="jDK-Mw-dvd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7ds-SS-KHE"/>
+                <constraint firstAttribute="trailing" secondItem="jDK-Mw-dvd" secondAttribute="trailing" id="ILf-bR-PZE"/>
+                <constraint firstItem="lnS-gA-VHP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="MIA-yP-DL5"/>
+                <constraint firstAttribute="trailing" secondItem="lnS-gA-VHP" secondAttribute="trailing" constant="5" id="Xhq-6j-S9M"/>
+                <constraint firstItem="lnS-gA-VHP" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="aee-KS-GEV"/>
+                <constraint firstAttribute="bottom" secondItem="jDK-Mw-dvd" secondAttribute="bottom" id="cty-WX-lPh"/>
+                <constraint firstItem="jDK-Mw-dvd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="h3h-b3-jIa"/>
+            </constraints>
+            <size key="customSize" width="210" height="156"/>
+            <connections>
+                <outlet property="lblOnlyTitle" destination="jDK-Mw-dvd" id="xC8-8x-PDU"/>
+                <outlet property="lblSubTitle" destination="J88-Tn-YFR" id="cWc-Q7-G6c"/>
+                <outlet property="lblTitle" destination="CmY-Eh-gqN" id="oPA-Hh-CWO"/>
+                <outlet property="stackView" destination="lnS-gA-VHP" id="2te-4b-b2Z"/>
+            </connections>
+            <point key="canvasLocation" x="-110" y="-6"/>
+        </collectionViewCell>
+    </objects>
+</document>

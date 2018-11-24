@@ -30,7 +30,8 @@ extension LoginPageHelper
             if status == true
             {
                 let message = json!["Message"] as! String
-                let responseCode = Int((json!["Code"] as! String))!
+                //let responseCode = Int((json!["Code"] as! String))!
+                let responseCode = 100
                 let userGuid = json!["UserGuid"] as? String
                 handler(status, responseCode, message, userGuid)
             }else{

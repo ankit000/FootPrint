@@ -18,13 +18,13 @@ class LoginNavVC: UINavigationController
 extension LoginNavVC
 {
     struct Storyboard{
-        static let ControllerID = "LoginNavVC"
+        static let ControllerID = "LoginVC"
     }
     
     //MARK:- Static Method
-    static func instantiate() -> LoginNavVC{
-        let storyboard = UIStoryboard(name: FootprintConstant.Storyboard.Login, bundle: Bundle.main)
-        return storyboard.instantiateViewController(withIdentifier: Storyboard.ControllerID) as! LoginNavVC
+    static func instantiate() -> LoginVC{
+        let storyboard = UIStoryboard(name: FootprintConstant.Storyboard.Main, bundle: Bundle.main)
+        return storyboard.instantiateViewController(withIdentifier: Storyboard.ControllerID) as! LoginVC
     }
     
 }

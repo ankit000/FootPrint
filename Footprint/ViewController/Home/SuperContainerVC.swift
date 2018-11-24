@@ -7,12 +7,11 @@
 //
 
 import UIKit
-
+import LGSideMenuController
 class SuperContainerVC: UIViewController
 {
     //MARK:- Public Vars
-  
-    
+
     var isWhiteBackgroundEnabled = false{
         didSet{
             if isWhiteBackgroundEnabled == true{
@@ -37,6 +36,7 @@ class SuperContainerVC: UIViewController
         return btn
     }()
     
+    
     fileprivate let bgImage:UIView = {
         let imageV = UIImageView()
         imageV.layer.masksToBounds = true
@@ -49,6 +49,14 @@ class SuperContainerVC: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+       
+        
+        if let sideMenuController = self.navigationController?.parent as? LGSideMenuController {
+            sideMenuController.isLeftViewEnabled = true
+        }
+        
         pageAppearance()
         initialSetting()
     }
@@ -73,13 +81,27 @@ class SuperContainerVC: UIViewController
         
         setCommonLayout()
         
-        btnMenu.addTarget(self, action: #selector(SuperContainerVC.openLeftMenu), for: .touchUpInside)
-//        if (self.navigationController?.viewControllers.count)! > 1 {
-//            btnMenu.setTitle(FootprintConstant.Font.BlackTie.Text.Back, for: .normal)
-//        }else{
+        if (self.navigationController?.viewControllers.count)! > 1 {
+            btnMenu.setTitle(FootprintConstant.Font.BlackTie.Text.Back, for: .normal)
+        }else{
             btnMenu.setTitle(FootprintConstant.Font.BlackTie.Text.ThreeLine, for: .normal)
-       // }
+        }
         
+        btnMenu.addTarget(self, action: #selector(self.openLeftMenuAction(_:)), for: .touchUpInside)
+
+    }
+    
+    @IBAction func openLeftMenuAction(_ sender: UIBarButtonItem) {
+        
+        if (self.navigationController?.viewControllers.count)! > 1 {
+            let _ = self.navigationController?.popViewController(animated: true)
+        }else{
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let window = appDelegate.window! as UIWindow
+            let mainVC = window.rootViewController as! LGSideMenuController
+            //appDelegate.leftViewController?.reload()
+            mainVC.showLeftView(animated: true, completionHandler: nil)
+        }
     }
     
     func setCommonLayout()
@@ -94,17 +116,6 @@ class SuperContainerVC: UIViewController
         
         view.addConstraint(visualFormat: "H:|[v0]|", forViews: bgImage)
         view.addConstraint(visualFormat: "V:|[v0]|", forViews: bgImage)
-    }
-    
-    //MARK:-
-    @objc fileprivate func openLeftMenu()
-    {
-//        if (self.navigationController?.viewControllers.count)! > 1 {
-//            let _ = self.navigationController?.popViewController(animated: true)
-//        }else{
-            present(LeftMenuNVC.shared, animated: true, completion: nil)
-        //}
-        
     }
     
 }

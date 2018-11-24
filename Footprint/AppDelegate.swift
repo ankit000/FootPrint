@@ -9,26 +9,48 @@
 import UIKit
 import CoreData
 import FacebookCore
+import LGSideMenuController
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
 
     var window: UIWindow?
-
+    var mainViewController: LGSideMenuController?
+    var leftViewController: LeftMenuVC?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
         GeneralManager.applicationInitialSetUp()
         
-        let initialViewController:UIViewController!
-        if UserRecordHelper.sharedInstance.isLogin
-        {
-            initialViewController = HomeViewController.instantiate()
-        }else{
-            initialViewController = LoginNavVC.instantiate()
+        
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let navigationController = storyboard.instantiateViewController(withIdentifier: "mainScreenNavigationView") as? UINavigationController
+        navigationController?.navigationBar.barStyle = .black
+        
+        
+
+
+        leftViewController = LeftMenuVC.instantiate()
+        mainViewController = LGSideMenuController(rootViewController: navigationController,
+                                                  leftViewController: leftViewController,
+                                                  rightViewController: nil)
+        
+        var leftMenuFrame = leftViewController?.view.frame
+        leftMenuFrame?.size.width = 300
+        mainViewController?.leftViewWidth = 300
+        leftViewController?.view.frame = leftMenuFrame!
+        mainViewController?.leftViewStatusBarStyle = .lightContent;
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.tintColor = UIColor.white
+        if let window = window {
+            window.makeKeyAndVisible()
+            window.rootViewController = mainViewController
         }
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
         
         //FB Setting
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)

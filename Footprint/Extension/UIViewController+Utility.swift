@@ -8,7 +8,7 @@
 
 import UIKit
 import MBProgressHUD
-//import LGSideMenuController
+import LGSideMenuController
 
 //MARK:- MBProgressHUD
 extension UIViewController
@@ -38,15 +38,7 @@ extension UIViewController
             MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
-    
-//    func _sideMenuController() -> LGSideMenuController?
-//    {
-//        if UIApplication.shared.delegate?.window??.rootViewController is LGSideMenuController {
-//           return UIApplication.shared.delegate?.window??.rootViewController as? LGSideMenuController
-//        }
-//        return nil
-//    }
-    
+
     
     func showAlert(title titleText:String, message messageText:String)
     {
@@ -115,17 +107,8 @@ extension UIViewController
         }
        
     }
-    
-    func openStoryboard(name:String)
-    {
-        let window = UIApplication.shared.keyWindow!
-        let vc = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()
-        
-        UIView.animate(withDuration: 0.05) {
-            window.rootViewController = vc
-        }
-        
-    }
+
+
 
     
     func statusBarHeight() -> CGFloat {
@@ -133,7 +116,34 @@ extension UIViewController
     }
 }
 
-//MARK:- Other
-extension UIViewController
-{
+
+class Router {
+    
+    class func pushViewController<T: UIViewController>(withStoryboardID storyboardID: String, type: T.Type) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let window = (UIApplication.shared.delegate!.window!)! as UIWindow
+        let mainVC = window.rootViewController as! LGSideMenuController
+        let navi = mainVC.rootViewController as! UINavigationController
+        mainVC.addChildViewController(navi)
+        if let viewController =  storyboard.instantiateViewController(withIdentifier: storyboardID) as? T {
+            navi.pushViewController(viewController, animated: true)
+        }
+    }
+    
+    class func pushViewController(viewControler: UIViewController) {
+        let window = (UIApplication.shared.delegate!.window!)! as UIWindow
+        let mainVC = window.rootViewController as! LGSideMenuController
+        let navi = mainVC.rootViewController as! UINavigationController
+        mainVC.addChildViewController(navi)
+        navi.pushViewController(viewControler, animated: true)
+    }
+    
+    class func showModalViewController(viewController: UIViewController, completion: (() -> Void)?) {
+        let window = (UIApplication.shared.delegate!.window!)! as UIWindow
+        let mainVC = window.rootViewController as! LGSideMenuController
+        let navi = mainVC.rootViewController as! UINavigationController
+        mainVC.addChildViewController(navi)
+        viewController.modalPresentationStyle = .overFullScreen
+        navi.present(viewController, animated: true, completion: completion)
+    }
 }

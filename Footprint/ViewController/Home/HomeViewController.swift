@@ -45,6 +45,13 @@ class HomeViewController: SuperContainerVC,UICollectionViewDataSource,UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if !(UserRecordHelper.sharedInstance.isLogin)
+        {
+            if let loginVC =  self.storyboard!.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC {
+                self.navigationController?.pushViewController(loginVC, animated: false)
+            }
+        }
+        
         currentStyle = "style1"
         
         let jsonPath = Bundle.main.path(forResource: "gallery", ofType: "json")
@@ -70,6 +77,7 @@ class HomeViewController: SuperContainerVC,UICollectionViewDataSource,UICollecti
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -150,6 +158,7 @@ class HomeViewController: SuperContainerVC,UICollectionViewDataSource,UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        Router.pushViewController(withStoryboardID:"ShoesCategoryVC", type: ShoesCategoryVC.self)
     }
     
     //MARK:-

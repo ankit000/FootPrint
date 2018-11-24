@@ -19,12 +19,27 @@ class LoginVC: UIViewController
     @IBOutlet fileprivate weak var txtUserName: UITextField!
     @IBOutlet fileprivate weak var txtPassword: UITextField!
     
-    //MARK:- ViewC Life Cycle
+    
+    // MARK: Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetting()
         pageAppearace()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -44,6 +59,19 @@ class LoginVC: UIViewController
         txtUserName.text = ""
     }
     
+    //MARK: Custom Methods
+    
+    func backToHome() {
+        
+        let controllers = self.navigationController?.viewControllers
+        for vc in controllers! {
+            if vc is HomeViewController {
+                _ = self.navigationController?.popToViewController(vc as! HomeViewController, animated: true)
+            }
+        }
+    }
+    
+    
     //MARK:- IBAction
     @IBAction fileprivate func logInAction()
     {
@@ -52,10 +80,10 @@ class LoginVC: UIViewController
        // moveToStoryboard(name: FootprintConstant.Storyboard.Main)
         //present(LeftMenuNVC.instantiate(), animated: true, completion: nil)
         
-        let window = UIApplication.shared.keyWindow!
-        
+//        let window = UIApplication.shared.keyWindow!
+//
 //        UIView.animate(withDuration: 0.05) {
-//            let vc = HomeVC.instantiate()
+//            let vc = HomeViewController.instantiate()
 //            window.rootViewController = vc
 //        }
 //        return
@@ -86,7 +114,8 @@ class LoginVC: UIViewController
                         
                         self?.showOkAlert(title: FootprintConstant.Alert.Success, message: message, completionHandler: { (status) in
                             //Navigate to home page
-                            self?.moveToStoryboard(name: FootprintConstant.Storyboard.Main)
+                            
+                            self?.backToHome()
                            // self?.present(LeftMenuNVC.instantiate(), animated: true, completion: nil)
                         })
                     }else{

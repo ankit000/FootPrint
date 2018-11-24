@@ -319,19 +319,19 @@ class RegisterCell: RegisterBaseCell
             
             switch cellType
             {
-            case .Name:
+            case .Name?:
                 break
-            case .Email:
+            case .Email?:
                 txt.keyboardType = .emailAddress
                 
-            case .DOB:
+            case .DOB?:
                 if datePicker == nil{
                     datePicker = UIDatePicker()
                     datePicker?.datePickerMode = .date
                 }
                 txt.inputView = datePicker
                 
-            case .Password, .ConfirmPassword:
+            case .Password?, .ConfirmPassword?:
                 txt.isSecureTextEntry = true
             
             case .none:
