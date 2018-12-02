@@ -117,12 +117,12 @@ struct FootprintConstant
         static let Dashboard      = BaseAPI + "catalog/GetAllCategories"
         static let TopMenu        = BaseAPI + "Catalogx/TopMenu"
         static let SubCategory    = BaseAPI + "Catalogx/Category?CategoryId="
-        static let UpdateUserInfo = BaseAPI + "Customerx/info"
+        static let UpdateUserInfo = BaseAPI + "Customer/info"
         static let ChangePassword = BaseAPI + "Customerx/RecoverPassword?email="
-        static let CustomerInfo   = BaseAPI + "Customerx/info"
+        static let CustomerInfo   = BaseAPI + "Customer/info"
         static let ProductInfo    = BaseAPI + "Productx/ProductDetailsWithRelatedProducts?productId="
         static let BlogList       = BaseAPI + "blog/list"
-        static let RewardPoint    = BaseAPI + "Customerx/GetRewardPoints"
+        static let RewardPoint    = BaseAPI + "customer/GetRewardPoints"
         static let AddProductInCart = BaseAPI + "ShoppingCart/AddProductToCart_Details"
         static let ShoppingCart   = BaseAPI + "ShoppingCartx/ShopCart"
         static let RemoveCartItem = BaseAPI + "ShoppingCartx/RemoveCartProduct"
@@ -141,7 +141,7 @@ struct FootprintConstant
     
     struct APIResponseCode
     {
-        static let LoginSuccess = 100
+        static let LoginSuccess = 200
         static let RegistrationSuccess = 102
         static let FBSuccess = 100
         static let RegistrationError = 109

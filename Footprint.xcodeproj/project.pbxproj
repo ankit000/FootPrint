@@ -54,6 +54,29 @@
 		B3F4E65E21A880B100368289 /* shoesCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E65D21A880B000368289 /* shoesCategoryCell.swift */; };
 		B3F4E66021A90D8C00368289 /* ShoesPageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E65F21A90D8C00368289 /* ShoesPageHelper.swift */; };
 		B3F4E66321A917D600368289 /* ShoesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E66221A917D600368289 /* ShoesCategory.swift */; };
+		B3F4E66621B0EB4300368289 /* MyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E66521B0EB4300368289 /* MyAccountVC.swift */; };
+		B3F4E66A21B0EBAC00368289 /* MyAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E66821B0EBAC00368289 /* MyAccountCell.swift */; };
+		B3F4E66B21B0EBAC00368289 /* MyAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F4E66921B0EBAC00368289 /* MyAccountCell.xib */; };
+		B3F4E66D21B0EBFC00368289 /* MyAccountHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E66C21B0EBFC00368289 /* MyAccountHelper.swift */; };
+		B3F4E67521B24CAE00368289 /* RewardPointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E67021B24CAD00368289 /* RewardPointsVC.swift */; };
+		B3F4E67721B24CAE00368289 /* CustomerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E67221B24CAE00368289 /* CustomerInfoVC.swift */; };
+		B3F4E67821B24CAE00368289 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E67321B24CAE00368289 /* ChangePasswordVC.swift */; };
+		B3F4E67921B24CAE00368289 /* GiftCardBalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E67421B24CAE00368289 /* GiftCardBalanceVC.swift */; };
+		B3F4E67B21B24E9A00368289 /* CustomerInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E67A21B24E9A00368289 /* CustomerInfoHelper.swift */; };
+		B3F4E67D21B24F4800368289 /* RewardPointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E67C21B24F4800368289 /* RewardPointHelper.swift */; };
+		B3F4E67F21B24F9100368289 /* LoyaltyProgramHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E67E21B24F9100368289 /* LoyaltyProgramHelper.swift */; };
+		B3F4E68221B2791F00368289 /* MyOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E68021B2791F00368289 /* MyOrdersVC.swift */; };
+		B3F4E68321B2791F00368289 /* OrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E68121B2791F00368289 /* OrderDetailVC.swift */; };
+		B3F4E68521B2796000368289 /* MyOrderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E68421B2796000368289 /* MyOrderHelper.swift */; };
+		B3F4E68B21B280B800368289 /* MyOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F4E68921B280B700368289 /* MyOrderCell.xib */; };
+		B3F4E68C21B280B800368289 /* MyOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E68A21B280B700368289 /* MyOrderCell.swift */; };
+		B3F4E68E21B282C800368289 /* OrderDetailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E68D21B282C800368289 /* OrderDetailHelper.swift */; };
+		B3F4E69121B283E300368289 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E68F21B283E300368289 /* OrderCell.swift */; };
+		B3F4E69221B283E300368289 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F4E69021B283E300368289 /* OrderCell.xib */; };
+		B3F4E69621B2846F00368289 /* OrderDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F4E69421B2846E00368289 /* OrderDetailView.xib */; };
+		B3F4E69721B2846F00368289 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E69521B2846E00368289 /* OrderDetailView.swift */; };
+		B3F4E69921B28C1600368289 /* ChangePasswordHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E69821B28C1500368289 /* ChangePasswordHelper.swift */; };
+		B3F4E69C21B2F30700368289 /* LoyaltyProgramVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E69B21B2F30700368289 /* LoyaltyProgramVC.swift */; };
 		DB3AE8A03880BF694E07F803 /* Pods_Footprint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8C5507C9A9C5F2EC4E1F8F /* Pods_Footprint.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +136,29 @@
 		B3F4E65D21A880B000368289 /* shoesCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shoesCategoryCell.swift; sourceTree = "<group>"; };
 		B3F4E65F21A90D8C00368289 /* ShoesPageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoesPageHelper.swift; sourceTree = "<group>"; };
 		B3F4E66221A917D600368289 /* ShoesCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoesCategory.swift; sourceTree = "<group>"; };
+		B3F4E66521B0EB4300368289 /* MyAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountVC.swift; sourceTree = "<group>"; };
+		B3F4E66821B0EBAC00368289 /* MyAccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountCell.swift; sourceTree = "<group>"; };
+		B3F4E66921B0EBAC00368289 /* MyAccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountCell.xib; sourceTree = "<group>"; };
+		B3F4E66C21B0EBFC00368289 /* MyAccountHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountHelper.swift; sourceTree = "<group>"; };
+		B3F4E67021B24CAD00368289 /* RewardPointsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardPointsVC.swift; sourceTree = "<group>"; };
+		B3F4E67221B24CAE00368289 /* CustomerInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerInfoVC.swift; sourceTree = "<group>"; };
+		B3F4E67321B24CAE00368289 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		B3F4E67421B24CAE00368289 /* GiftCardBalanceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCardBalanceVC.swift; sourceTree = "<group>"; };
+		B3F4E67A21B24E9A00368289 /* CustomerInfoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerInfoHelper.swift; sourceTree = "<group>"; };
+		B3F4E67C21B24F4800368289 /* RewardPointHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardPointHelper.swift; sourceTree = "<group>"; };
+		B3F4E67E21B24F9100368289 /* LoyaltyProgramHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyProgramHelper.swift; sourceTree = "<group>"; };
+		B3F4E68021B2791F00368289 /* MyOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersVC.swift; sourceTree = "<group>"; };
+		B3F4E68121B2791F00368289 /* OrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailVC.swift; sourceTree = "<group>"; };
+		B3F4E68421B2796000368289 /* MyOrderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderHelper.swift; sourceTree = "<group>"; };
+		B3F4E68921B280B700368289 /* MyOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyOrderCell.xib; sourceTree = "<group>"; };
+		B3F4E68A21B280B700368289 /* MyOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderCell.swift; sourceTree = "<group>"; };
+		B3F4E68D21B282C800368289 /* OrderDetailHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailHelper.swift; sourceTree = "<group>"; };
+		B3F4E68F21B283E300368289 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		B3F4E69021B283E300368289 /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		B3F4E69421B2846E00368289 /* OrderDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetailView.xib; sourceTree = "<group>"; };
+		B3F4E69521B2846E00368289 /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		B3F4E69821B28C1500368289 /* ChangePasswordHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordHelper.swift; sourceTree = "<group>"; };
+		B3F4E69B21B2F30700368289 /* LoyaltyProgramVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoyaltyProgramVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +185,13 @@
 		3808BCC2212D8116003C7D9E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B3F4E68D21B282C800368289 /* OrderDetailHelper.swift */,
+				B3F4E68421B2796000368289 /* MyOrderHelper.swift */,
+				B3F4E69821B28C1500368289 /* ChangePasswordHelper.swift */,
+				B3F4E67E21B24F9100368289 /* LoyaltyProgramHelper.swift */,
+				B3F4E67C21B24F4800368289 /* RewardPointHelper.swift */,
+				B3F4E67A21B24E9A00368289 /* CustomerInfoHelper.swift */,
+				B3F4E66C21B0EBFC00368289 /* MyAccountHelper.swift */,
 				B3E5543B21A151BA00F5F354 /* MyJourneyHelper.swift */,
 				38303A7F213676D4001D1449 /* ServerConnectionHelper.swift */,
 				B3F4E65F21A90D8C00368289 /* ShoesPageHelper.swift */,
@@ -251,6 +304,7 @@
 			children = (
 				386CAD5C212ACB1400F82A20 /* AppDelegate.swift */,
 				B3F4E66121A917D600368289 /* Models */,
+				B3F4E69321B2846E00368289 /* View */,
 				B3F45DFF21A871B100A9966E /* Layout */,
 				B3F4E65C21A880B000368289 /* TableViewCell */,
 				385E2EE7213FF334000C3C9D /* CollectionCell */,
@@ -272,6 +326,8 @@
 		386CAD71212ACB2100F82A20 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B3F4E69A21B2F30700368289 /* LoyaltyProgram */,
+				B3F4E66421B0EB4300368289 /* MyAccount */,
 				B3F4E65921A87E1D00368289 /* Shoes */,
 				B3E5543021A14E2000F5F354 /* MyJourney */,
 				387B140D21511987006FCFAC /* ProductPage */,
@@ -359,6 +415,8 @@
 		B3F4E65C21A880B000368289 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				B3F4E68821B280B700368289 /* MyOrderCell */,
+				B3F4E66721B0EBAC00368289 /* MyAccountCell */,
 				B3F4E65D21A880B000368289 /* shoesCategoryCell.swift */,
 			);
 			path = TableViewCell;
@@ -370,6 +428,57 @@
 				B3F4E66221A917D600368289 /* ShoesCategory.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B3F4E66421B0EB4300368289 /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4E68021B2791F00368289 /* MyOrdersVC.swift */,
+				B3F4E68121B2791F00368289 /* OrderDetailVC.swift */,
+				B3F4E67321B24CAE00368289 /* ChangePasswordVC.swift */,
+				B3F4E67221B24CAE00368289 /* CustomerInfoVC.swift */,
+				B3F4E67421B24CAE00368289 /* GiftCardBalanceVC.swift */,
+				B3F4E67021B24CAD00368289 /* RewardPointsVC.swift */,
+				B3F4E66521B0EB4300368289 /* MyAccountVC.swift */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		B3F4E66721B0EBAC00368289 /* MyAccountCell */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4E66821B0EBAC00368289 /* MyAccountCell.swift */,
+				B3F4E66921B0EBAC00368289 /* MyAccountCell.xib */,
+			);
+			path = MyAccountCell;
+			sourceTree = "<group>";
+		};
+		B3F4E68821B280B700368289 /* MyOrderCell */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4E68F21B283E300368289 /* OrderCell.swift */,
+				B3F4E69021B283E300368289 /* OrderCell.xib */,
+				B3F4E68921B280B700368289 /* MyOrderCell.xib */,
+				B3F4E68A21B280B700368289 /* MyOrderCell.swift */,
+			);
+			path = MyOrderCell;
+			sourceTree = "<group>";
+		};
+		B3F4E69321B2846E00368289 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4E69421B2846E00368289 /* OrderDetailView.xib */,
+				B3F4E69521B2846E00368289 /* OrderDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B3F4E69A21B2F30700368289 /* LoyaltyProgram */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4E69B21B2F30700368289 /* LoyaltyProgramVC.swift */,
+			);
+			path = LoyaltyProgram;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,12 +542,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F4E68B21B280B800368289 /* MyOrderCell.xib in Resources */,
 				3808BCF2212D856B003C7D9E /* Login.storyboard in Resources */,
 				386CAD6A212ACB1400F82A20 /* LaunchScreen.storyboard in Resources */,
 				B301DDA421A07C7500A60D61 /* galleryCell.xib in Resources */,
 				38303A862136A674001D1449 /* BlackTie-Regular-webfont.ttf in Resources */,
 				B3E5543A21A151AC00F5F354 /* MyJourneyCell.xib in Resources */,
+				B3F4E66B21B0EBAC00368289 /* MyAccountCell.xib in Resources */,
 				386CAD67212ACB1400F82A20 /* Assets.xcassets in Resources */,
+				B3F4E69221B283E300368289 /* OrderCell.xib in Resources */,
+				B3F4E69621B2846F00368289 /* OrderDetailView.xib in Resources */,
 				385E2EEB213FF7D0000C3C9D /* DashboardCell.xib in Resources */,
 				38303A852136A671001D1449 /* BlackTie-Light-webfont.ttf in Resources */,
 				38303A892136A679001D1449 /* Montserrat-Bold.ttf in Resources */,
@@ -517,35 +630,54 @@
 			files = (
 				3808BCED212D8447003C7D9E /* UIView+Utility.swift in Sources */,
 				3808BCD8212D83A0003C7D9E /* ForgotPasswordVC.swift in Sources */,
+				B3F4E68521B2796000368289 /* MyOrderHelper.swift in Sources */,
 				385E2EE6213FEE20000C3C9D /* DashboardHelper.swift in Sources */,
+				B3F4E67D21B24F4800368289 /* RewardPointHelper.swift in Sources */,
 				B3E5543921A151AC00F5F354 /* MyJourneyCell.swift in Sources */,
 				B3F45E0121A871B100A9966E /* MyJourneyCellLayout.swift in Sources */,
+				B3F4E68321B2791F00368289 /* OrderDetailVC.swift in Sources */,
+				B3F4E67821B24CAE00368289 /* ChangePasswordVC.swift in Sources */,
 				3808BCD9212D83A0003C7D9E /* LoginNavVC.swift in Sources */,
 				381115232135666F00928DFB /* String+Utility.swift in Sources */,
 				B301DDA221A07C7500A60D61 /* GalleryCell.m in Sources */,
 				3808BCC4212D8122003C7D9E /* GeneralManager.swift in Sources */,
 				3808BCC9212D825B003C7D9E /* Constant.swift in Sources */,
 				B301DD8A21A07A9600A60D61 /* AWCollectionViewSlidingDoorLayout.m in Sources */,
+				B3F4E66621B0EB4300368289 /* MyAccountVC.swift in Sources */,
 				3808BCDA212D83A0003C7D9E /* LoginVC.swift in Sources */,
 				B301DD5D21A0707B00A60D61 /* HomeViewController.swift in Sources */,
+				B3F4E69921B28C1600368289 /* ChangePasswordHelper.swift in Sources */,
+				B3F4E66D21B0EBFC00368289 /* MyAccountHelper.swift in Sources */,
+				B3F4E68E21B282C800368289 /* OrderDetailHelper.swift in Sources */,
 				38303A8C2136B30D001D1449 /* FBLoginHelper.swift in Sources */,
 				B3F4E66321A917D600368289 /* ShoesCategory.swift in Sources */,
+				B3F4E69121B283E300368289 /* OrderCell.swift in Sources */,
 				38303A80213676D4001D1449 /* ServerConnectionHelper.swift in Sources */,
 				3808BCD3212D833E003C7D9E /* UserRecordHelper.swift in Sources */,
 				B3F4E66021A90D8C00368289 /* ShoesPageHelper.swift in Sources */,
 				3808BCF0212D8447003C7D9E /* Date+Utility.swift in Sources */,
 				386CAD65212ACB1400F82A20 /* Footprint.xcdatamodeld in Sources */,
+				B3F4E68C21B280B800368289 /* MyOrderCell.swift in Sources */,
 				B3F4E65E21A880B100368289 /* shoesCategoryCell.swift in Sources */,
 				3808BCDE212D83F2003C7D9E /* LoginPageHelper.swift in Sources */,
+				B3F4E67B21B24E9A00368289 /* CustomerInfoHelper.swift in Sources */,
 				B3F4E65B21A87E1D00368289 /* ShoesCategoryVC.swift in Sources */,
+				B3F4E69721B2846F00368289 /* OrderDetailView.swift in Sources */,
 				B3E5543C21A151BA00F5F354 /* MyJourneyHelper.swift in Sources */,
+				B3F4E67F21B24F9100368289 /* LoyaltyProgramHelper.swift in Sources */,
 				B3E5543321A14E2000F5F354 /* MyJourneyVC.swift in Sources */,
+				B3F4E67921B24CAE00368289 /* GiftCardBalanceVC.swift in Sources */,
 				38CFF5772137CD6B00E74BD9 /* LeftMenuVC.swift in Sources */,
+				B3F4E68221B2791F00368289 /* MyOrdersVC.swift in Sources */,
 				385E2EEA213FF346000C3C9D /* DashboardCell.swift in Sources */,
+				B3F4E67721B24CAE00368289 /* CustomerInfoVC.swift in Sources */,
 				B3E5543621A14E7100F5F354 /* HeaderVC.swift in Sources */,
+				B3F4E66A21B0EBAC00368289 /* MyAccountCell.swift in Sources */,
+				B3F4E69C21B2F30700368289 /* LoyaltyProgramVC.swift in Sources */,
 				B301DDA821A1275400A60D61 /* SuperContainerVC.swift in Sources */,
 				386CAD5D212ACB1400F82A20 /* AppDelegate.swift in Sources */,
 				3808BCF4212D8948003C7D9E /* SignUpVC.swift in Sources */,
+				B3F4E67521B24CAE00368289 /* RewardPointsVC.swift in Sources */,
 				3808BCEF212D8447003C7D9E /* UIViewController+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

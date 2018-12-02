@@ -73,6 +73,8 @@ class ForgotPasswordVC:UICollectionViewController, UICollectionViewDelegateFlowL
     }
     fileprivate func pageAppearance(){
         collectionView?.backgroundColor = FootprintConstant.Color.FootprintBlueColor
+        self.view.backgroundColor = FootprintConstant.Color.FootprintBlueColor
+
     }
     
     fileprivate func setLayout()

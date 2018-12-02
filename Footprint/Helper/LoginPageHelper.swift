@@ -29,10 +29,9 @@ extension LoginPageHelper
             
             if status == true
             {
-                let message = json!["Message"] as! String
-                //let responseCode = Int((json!["Code"] as! String))!
-                let responseCode = 100
-                let userGuid = json!["UserGuid"] as? String
+                let message = json!["message"] as! String
+                let responseCode = (json!["messageCode"]as! Int)
+                let userGuid = (json!["model"]as![String:Any])["UserID"] as? String
                 handler(status, responseCode, message, userGuid)
             }else{
                 handler(false, -1, FootprintConstant.Alert.SWR, nil)
@@ -48,6 +47,7 @@ extension LoginPageHelper
             
             if status == true
             {
+
                 let message = json!["Message"] as! String
                 let responseCode = Int((json!["Code"] as! String))!
                 let userGuid = json!["UserGuid"] as? String

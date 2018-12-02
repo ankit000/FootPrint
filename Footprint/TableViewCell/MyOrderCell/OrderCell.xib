@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" rowHeight="140" id="KGk-i7-Jjw" customClass="OrderCell" customModule="Footprint" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZS-Pj-73L" userLabel="Container">
+                        <rect key="frame" x="24" y="10" width="272" height="154.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ttC-WM-7Rs">
+                                <rect key="frame" x="10" y="0.0" width="252" height="154.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKU" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="DNa-ng-Woz">
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="35"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <color key="textColor" red="0.03574880213" green="0.15771272780000001" blue="0.27285173540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="gD2-mK-mDJ">
+                                        <rect key="frame" x="0.0" y="40" width="252" height="35"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <color key="textColor" red="0.03574880213" green="0.15771272780000001" blue="0.27285173540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="AEh-X6-SOt">
+                                        <rect key="frame" x="0.0" y="80" width="252" height="34.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <color key="textColor" red="0.03574880213" green="0.15771272780000001" blue="0.27285173540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Tk-yS-a6D">
+                                        <rect key="frame" x="0.0" y="119.5" width="252" height="35"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <color key="textColor" red="0.03574880213" green="0.15771272780000001" blue="0.27285173540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87970095869999998" green="0.86318302150000004" blue="0.8098035455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ttC-WM-7Rs" firstAttribute="top" secondItem="AZS-Pj-73L" secondAttribute="top" id="abn-Cd-Vol"/>
+                            <constraint firstAttribute="trailing" secondItem="ttC-WM-7Rs" secondAttribute="trailing" constant="10" id="ehq-Wi-NoO"/>
+                            <constraint firstItem="ttC-WM-7Rs" firstAttribute="leading" secondItem="AZS-Pj-73L" secondAttribute="leading" constant="10" id="lDj-IE-Jma"/>
+                            <constraint firstAttribute="bottom" secondItem="ttC-WM-7Rs" secondAttribute="bottom" id="xnS-Ap-zL7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="AZS-Pj-73L" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.85" id="Aye-GQ-5tw"/>
+                    <constraint firstItem="AZS-Pj-73L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="B8x-e0-e9F"/>
+                    <constraint firstItem="AZS-Pj-73L" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Woy-BM-odS"/>
+                    <constraint firstAttribute="bottom" secondItem="AZS-Pj-73L" secondAttribute="bottom" constant="10" id="Zly-WX-o6E"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="lblName" destination="gD2-mK-mDJ" id="5uo-2z-c2y"/>
+                <outlet property="lblPrice" destination="4Tk-yS-a6D" id="3ve-HL-iZG"/>
+                <outlet property="lblQty" destination="AEh-X6-SOt" id="8EZ-4p-aWu"/>
+                <outlet property="lblSku" destination="DNa-ng-Woz" id="aI2-pb-N7o"/>
+                <outlet property="viewContainer" destination="AZS-Pj-73L" id="itr-A9-gUN"/>
+            </connections>
+            <point key="canvasLocation" x="272" y="61"/>
+        </tableViewCell>
+    </objects>
+</document>

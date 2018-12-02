@@ -55,6 +55,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         //FB Setting
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 
+        
+        
+        //If user has logged in once then save the last cookies which we got after registration/login
+        if UserRecordHelper.sharedInstance.isLogin
+        {
+            UserRecordHelper.sharedInstance.restoreCookies()
+        }
+        
         return true
     }
     

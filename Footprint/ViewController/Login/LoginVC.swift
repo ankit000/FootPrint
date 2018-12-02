@@ -108,10 +108,12 @@ class LoginVC: UIViewController
                     if let userGuid = guid
                     {
                         //Save record in local
-                        let userRecord = UserRecord(userEmail: dict["Email"], userGUID: userGuid, userDOB:"")
+
+                       
+                        let userRecord = UserRecord(userEmail: dict["Email"], userGUID: userGuid, userDOB:"5-12-2018")
                         UserRecordHelper.sharedInstance.userRecord = userRecord
                         UserRecordHelper.sharedInstance.isLogin = true
-                        
+                        UserRecordHelper.sharedInstance.storeCookies()
                         self?.showOkAlert(title: FootprintConstant.Alert.Success, message: message, completionHandler: { (status) in
                             //Navigate to home page
                             

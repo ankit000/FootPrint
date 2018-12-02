@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyAccountCell" rowHeight="58" id="KGk-i7-Jjw" customClass="MyAccountCell" customModule="Footprint" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvE-d9-0ch" userLabel="Title">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6E-5O-GYw" userLabel="Seperator">
+                        <rect key="frame" x="32" y="55" width="256" height="2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="Cv2-Io-MD4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="d6E-5O-GYw" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5nA-pw-FMz"/>
+                    <constraint firstItem="hvE-d9-0ch" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="EA6-HN-hhf"/>
+                    <constraint firstAttribute="trailing" secondItem="hvE-d9-0ch" secondAttribute="trailing" id="fqB-xG-F7N"/>
+                    <constraint firstItem="d6E-5O-GYw" firstAttribute="top" secondItem="hvE-d9-0ch" secondAttribute="bottom" constant="10" id="jfG-T9-K1x"/>
+                    <constraint firstItem="hvE-d9-0ch" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oWQ-c9-Ypr"/>
+                    <constraint firstItem="d6E-5O-GYw" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="srQ-oB-c3V"/>
+                    <constraint firstAttribute="bottom" secondItem="d6E-5O-GYw" secondAttribute="bottom" id="wSk-Ew-xX6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.019607843140000001" green="0.10980392160000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="lblSeperator" destination="d6E-5O-GYw" id="eSf-gg-yNP"/>
+                <outlet property="lblTitle" destination="hvE-d9-0ch" id="erQ-13-czn"/>
+            </connections>
+            <point key="canvasLocation" x="-452" y="-119"/>
+        </tableViewCell>
+    </objects>
+</document>

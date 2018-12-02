@@ -33,6 +33,12 @@ extension String {
         
         return ceil(boundingBox.width)
     }
+    
+    func getDayMonthYear () -> (String, String, String){
+        let dayMonthYear = self.components(separatedBy: "-")
+        return (dayMonthYear[0], dayMonthYear[1], dayMonthYear[2])
+    }
+    
 }
 
 extension NSAttributedString

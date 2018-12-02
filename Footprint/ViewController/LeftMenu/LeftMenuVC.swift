@@ -11,7 +11,8 @@ import LGSideMenuController
 enum MenuSection:String{
     case Logout
     case MyJourney = "My Journey"
-    
+    case MyAccount = "My Account"
+
 }
 
 struct MenuRecord {
@@ -131,6 +132,9 @@ class LeftMenuVC:UICollectionViewController, UICollectionViewDelegateFlowLayout
                         
                     case .MyJourney:
                         Router.pushViewController(withStoryboardID: "MyJourneyVC", type: MyJourneyVC.self)
+                        break
+                    case .MyAccount:
+                        Router.pushViewController(withStoryboardID: "MyAccountVC", type: MyAccountVC.self)
                         break
                     }
                     

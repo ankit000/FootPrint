@@ -26,7 +26,7 @@ extension ShoesPageHelper
             
             if status == true
             {
-                let categoryArray = ShoesCategory.modelsFromDictionaryArray(array: json!["model"] as! NSArray)
+                let categoryArray = ShoesCategory.modelsFromDictionaryArray(array: (json!["model"] as! [String:Any])["categories"] as! NSArray)
                 handler(status,categoryArray)
             }else{
                 handler(false, [])

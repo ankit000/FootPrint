@@ -80,12 +80,43 @@ final class UserRecordHelper
 //    var cookie:HTTPCookie?{
 //        get{
 //            let cookieProperties = prefs.value(forKey: "Cookie")
-//            return HTTPCookie(properties: cookieProperties as! [HTTPCookiePropertyKey : Any])
+//            return HTTPCookie(properties: cookieProperties! as! [HTTPCookiePropertyKey : Any])
 //        }set{
-//            prefs.set(newValue?.properties, forKey: "Cookie")
+//            prefs.set(newValue!.properties, forKey: "Cookie")
 //            prefs.synchronize()
 //        }
 //    }
+    
+    func storeCookies() {
+        let cookiesStorage = HTTPCookieStorage.shared
+        let userDefaults = UserDefaults.standard
+        
+        let serverBaseUrl = "https://www.gomobishop.com/Mservices/"
+        var cookieDict = [String : AnyObject]()
+        
+        for cookie in cookiesStorage.cookies(for: NSURL(string: serverBaseUrl)! as URL)! {
+            cookieDict[cookie.name] = cookie.properties as AnyObject?
+        }
+        
+        userDefaults.set(cookieDict, forKey: "Cookie")
+    }
+    
+    
+    func restoreCookies() {
+        let cookiesStorage = HTTPCookieStorage.shared
+        let userDefaults = UserDefaults.standard
+        
+        if let cookieDictionary = userDefaults.dictionary(forKey: "Cookie") {
+            
+            for (_, cookieProperties) in cookieDictionary {
+                if let cookie = HTTPCookie(properties: cookieProperties as! [HTTPCookiePropertyKey : Any] ) {
+                    cookiesStorage.setCookie(cookie)
+                }
+            }
+        }
+    }
+    
+    
     
     func logout(){
         isLogin = false
